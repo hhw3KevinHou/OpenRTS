@@ -33,7 +33,7 @@ public class Point3D {
 	}
 
 	/**
-	 * create � new point 3D by : 1- elevating the given point 2D, 2- rotating the given point 2D around Z, 3- rotating the given point 2D in it's own plane.
+	 * create new point 3D by : 1- elevating the given point 2D, 2- rotating the given point 2D around Z, 3- rotating the given point 2D in it's own plane.
 	 *
 	 * @param p
 	 * @param val

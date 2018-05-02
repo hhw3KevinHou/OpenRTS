@@ -84,8 +84,6 @@ public class Ring<Object> extends ArrayList<Object> {
 		Object o = get(indexOf(start));
 		do {
 			newRing.add(o);
-			// BEN thypiquement ici, si j'ai deux points equivalents dans mon polygone (cas des polygones � trou), le getNext, en cherchant
-			// le premier objet equals() risque de me renvoyer mon objet start et me faire sortir de la boucle avant l'heure
 			o = getNext(o);
 		} while(o != start);
 		clear();

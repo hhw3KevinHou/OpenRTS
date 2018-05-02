@@ -1003,8 +1003,9 @@ public class MyParticleEmitter extends ParticleEmitter {
         particles[idx1] = particles[idx2];
         particles[idx2] = p1;
     }
-
-    private void updateParticle(Particle p, float tpf, Vector3f min, Vector3f max){
+    
+    @Override
+    protected void updateParticle(Particle p, float tpf, Vector3f min, Vector3f max){
         // applying gravity
         p.velocity.x -= gravity.x * tpf;
         p.velocity.y -= gravity.y * tpf;

@@ -2,6 +2,7 @@ apply plugin: 'application'
 apply plugin: 'java'
 apply plugin: 'eclipse'
 
+
 mainClassName = 'Game'
 if (!hasProperty('mainClass')) {
 	ext.mainClass = 'Game'
@@ -15,13 +16,15 @@ repositories {
     mavenCentral()
     maven {
         url 'http://updates.jmonkeyengine.org/maven'
+       
+        
     }
 }
 
 dependencies {
     compile project(':core')
 //    compile 'com.jme3:jme3-desktop:$jmonkeyengine_version.+'
-//    compile 'com.jme3:jme3-lwjgl:$jmonkeyengine_version.+'
+    compile "gradle.plugin.com.stehno:gradle-natives:0.3.1"
 }
 
 sourceSets {
