@@ -24,10 +24,8 @@ allprojects {
 		jcenter()
 		mavenLocal()
 		mavenCentral()
-                                          maven { url 'https://dl.bintray.com/jmonkeyengine/org.jmonkeyengine/' }
-                                         maven {
-      url "https://plugins.gradle.org/m2/"
-    }
+        maven { url 'https://dl.bintray.com/jmonkeyengine/org.jmonkeyengine/' }
+        maven { url "https://plugins.gradle.org/m2/"}
 		maven { url "https://oss.sonatype.org/content/repositories/snapshots/" }
 		maven { url "https://oss.sonatype.org/content/repositories/releases/" }
 		maven { url 'http://updates.jmonkeyengine.org/maven' }	
@@ -36,8 +34,10 @@ allprojects {
 	
 	dependencies {
 		// jMonkey Engine
-                                          compile "jbullet:jbullet:0.0.1"
-                                          compile "stack-alloc:stack-alloc:0.0.1"
+		//mvn install:install-file -Dfile=./lib/jbullet.jar -DgroupId=jbullet -DartifactId=jbullet -Dversion=0.0.1 -Dpackaging=jar 
+       // mvn install:install-file -Dfile=./lib/stack-alloc.jar -DgroupId=stack-alloc -DartifactId=stack-alloc -Dversion=0.0.1 -Dpackaging=jar 
+        compile "jbullet:jbullet:0.0.1"
+        compile "stack-alloc:stack-alloc:0.0.1"
 		compile "org.jmonkeyengine:jme3-core:$jmonkeyengine_version"
 		compile "org.jmonkeyengine:jme3-effects:$jmonkeyengine_version" 
 		compile "org.jmonkeyengine:jme3-networking:$jmonkeyengine_version"
